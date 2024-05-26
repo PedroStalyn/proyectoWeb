@@ -749,9 +749,48 @@ select {
   --tw-contain-style:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-2 {
@@ -768,6 +807,10 @@ select {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -794,16 +837,20 @@ select {
   height: 8rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-96 {
   height: 24rem;
 }
 
-.h-56 {
-  height: 14rem;
+.w-1\/2 {
+  width: 50%;
 }
 
-.h-full {
-  height: 100%;
+.w-24 {
+  width: 6rem;
 }
 
 .w-32 {
@@ -818,16 +865,24 @@ select {
   width: 100%;
 }
 
-.w-24 {
-  width: 6rem;
-}
-
 .min-w-full {
   min-width: 100%;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .max-w-md {
   max-width: 28rem;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .appearance-none {
@@ -838,10 +893,6 @@ select {
 
 .flex-row {
   flex-direction: row;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -866,6 +917,12 @@ select {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -900,14 +957,34 @@ select {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.bg-amber-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 191 36 / var(--tw-bg-opacity));
+}
+
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-pink-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 24 93 / var(--tw-bg-opacity));
 }
 
 .bg-sky-300 {
@@ -935,29 +1012,14 @@ select {
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-slate-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-amber-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 191 36 / var(--tw-bg-opacity));
-}
-
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500 {
@@ -970,9 +1032,22 @@ select {
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
-.bg-amber-800 {
+.bg-slate-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(146 64 14 / var(--tw-bg-opacity));
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-3 {
@@ -1022,8 +1097,30 @@ select {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .align-baseline {
   vertical-align: baseline;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -1040,6 +1137,10 @@ select {
   font-weight: 700;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .italic {
   font-style: italic;
 }
@@ -1053,9 +1154,19 @@ select {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-pink-700 {
+  --tw-text-opacity: 1;
+  color: rgb(190 24 93 / var(--tw-text-opacity));
 }
 
 .text-red-500 {
@@ -1074,10 +1185,21 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-700:hover {
@@ -1090,13 +1212,31 @@ select {
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
+.hover\:text-gray-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.focus\:border-blue-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-@media (min-width: 640px) {
-  .sm\:flex-col {
-    flex-direction: column;
+@media (min-width: 768px) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 }
